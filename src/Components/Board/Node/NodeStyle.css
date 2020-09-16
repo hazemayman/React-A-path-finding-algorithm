@@ -1,0 +1,110 @@
+.node{
+    width: 25px;
+    align-self: center;
+    height: 25px;
+    /* background-color: red; */
+    border: 1px solid #477997;
+
+}
+.node:hover{
+    box-shadow: 2px 2px 20px red;
+        
+}
+
+.node-finish{
+    background-color: red;
+}
+.node-start{
+    background-color: green
+}
+.node-visited {
+    animation-name: visitedAnimation;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+  }
+  
+  @keyframes visitedAnimation {
+    0% {
+      transform: scale(0.3);
+      background-color: #DE337f;
+      border-radius: 100%;
+    }
+  
+  
+    50% {
+      background-color: #c866ee
+    }
+  
+    75% {
+      transform: scale(1.2);
+      background-color: #139d95
+    }
+  
+    100% {
+      transform: scale(1);
+      background-color: #78f4ed
+    }
+  }
+
+.node-final-path {
+    animation-name: shortestPath;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+  }
+  
+  @keyframes shortestPath {
+    0% {
+      transform: scale(0.6);
+      background-color: #18A5E7;
+    }
+  
+    50% {
+      transform: scale(1.2);
+      background-color: #18E9D3;
+    }
+  
+    100% {
+      transform: scale(1);
+      background-color: #18E95B;
+    }
+  }
+
+
+.node-wall{
+  animation-name: nodewall;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+
+@keyframes nodewall {
+  0% {
+    transform: scale(0.6);
+    background-color: #18A5E7;
+  }
+
+  50% {
+    transform: scale(1.2);
+    background-color: #c866ee;
+  }
+
+  100% {
+    transform: scale(1);
+    background-color: #006CAB;
+  }
+}

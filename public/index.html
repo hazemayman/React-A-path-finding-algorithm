@@ -9,6 +9,8 @@
       name="description"
       content="Web site created using create-react-app"
     />
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -28,7 +30,56 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div class = "outterbox ">
+      <div id="sidebar">
+        <button class="btn btn-primary" id="toggle" onclick="toggleClass()">II</button>
+          <div class="bg-light border-left" id="sidebar-wrapper">
+          <div class="sidebar-heading">Change Settings</div>
+            <div class="list-group list-group-flush text-center">
+              <div id="element_one_algoritm" class="padding">
+                <p>
+                  <label>Algotithm : </label>
+                  <select class = "btn btn-outline-primary" id = "algorithm-List">
+                    <option class = "btn btn-light" value = "1">A * algorithm </option>
+                    <!-- <option class = "btn btn-light" value = "2">two</option>
+                    <option class = "btn btn-light" value = "3">three</option>
+                    <option class = "btn btn-light" value = "4">four</option> -->
+                  </select>
+               </p>
+              </div>
+              <div id="element_two_speed" class="padding">
+                <div id="radioboxes">
+                  <div>
+                    <input type="radio" id="slow" value="slow" name="choice" >
+                    <label for="slow">Slow</label>
+                  </div>
+                  <div>
+                    <input type="radio" id="Moderate" value="Moderate"  name="choice" checked="checked">
+                    <label for="slow">Moderate</label>
+                  </div>
+                  <div>
+                    <input type="radio" id="Fast" value="Fast" name="choice">
+                    <label for="slow">Fast</label>
+                  </div>
+                </div>
+              </div>
+              <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="25" class="slider" id="myRange">
+                <p id="slider-value">25</p>
+              </div>
+              <div id="element_three_random" class="padding">
+                <button class="btn btn-outline-primary" id="random-generator">random obstacles</button>
+              </div>
+              <button class="btn btn-primary padding marrging" onclick="toggleClass()"> Save</button>
+            </div>
+          </div>
+        </div>
+        <div id="root"></div>
+      </div>
+
+       
+
+    
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -39,5 +90,18 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script>
+      function toggleClass(){
+
+        $(".outterbox").toggleClass("toggled");
+      }
+    </script>
+    <script>
+  
+    </script>
   </body>
 </html>
